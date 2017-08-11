@@ -6,7 +6,7 @@ from django.db import models
 # Create your models here.
 
 class Course(models.Model):
-    name = models.CharField(max_length=50,verbose_name=u'课程')
+    name = models.CharField(max_length=50,verbose_name=u'课程名')
     desc = models.CharField(max_length=300,verbose_name=u'课程描述')
     detail = models.TextField(verbose_name=u'课程详情')
     degree = models.CharField(verbose_name=u'难度', choices=(('cj',u'初级'),('zj',u'中级'),('gj',u'高级')),max_length=2)

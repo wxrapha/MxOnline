@@ -20,11 +20,11 @@
      <div  class=" header">
            {% if request.user.is_authenticated %}
                <div class="top">
-           <div class="wp">
-              <div class="fl"><p>服务电话：<b>33333333</b></p></div>
+                    <div class="wp">
+                        <div class="fl"><p>服务电话：<b>33333333</b></p></div>
               <!--登录后跳转-->
 
-                 <div class="personal">
+                        <div class="personal">
                            <dl class="user fr">
                                <dd>bobby<img class="down fr" src="/static/images/top_down.png"/></dd>
                                <dt><img width="20" height="20" src="/static/media/image/2016/12/default_big_14.png"/></dt>
@@ -43,10 +43,8 @@
                                </div>
                            </div>
                        </div>
-
-
-           </div>
-        </div>
+                    </div>
+                </div>
            {% else %}
                <div class="top">
            <div class="wp">
@@ -58,10 +56,6 @@
                </div>
            {% endif %}
 
-
-				</div>
-			</div>
-
             <div class="middle">
                 <div class="wp">
                     <a href="index.html"><img class="fl" src="/static/images/logo.jpg"/></a>
@@ -72,7 +66,7 @@
                             </span>
                             <ul class="selectMenu" id="jsSelectMenu">
                                 <li data-value="course">公开课</li>
-                                <li data-value="org">课程机构</li>
+                                <li data-value="{% url 'org_list' %}">课程机构</li>
                                 <li data-value="teacher">授课老师</li>
                             </ul>
                         </div>
@@ -83,7 +77,7 @@
             </div>
             
             
-			<nav>
+			<div>
 				<div class="nav">
 					<div class="wp">
 						<ul>
@@ -100,7 +94,7 @@
 						</ul>
 					</div>
 				</div>
-			</nav>
+			</div>
             
 			</div>
     </header>
