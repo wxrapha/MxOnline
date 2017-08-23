@@ -18,6 +18,7 @@
 <section class="headerwrap ">
      <header>
      <div  class=" header">
+
            {% if request.user.is_authenticated %}
                <div class="top">
                     <div class="wp">
@@ -66,7 +67,7 @@
                             </span>
                             <ul class="selectMenu" id="jsSelectMenu">
                                 <li data-value="course">公开课</li>
-                                <li data-value="{% url 'org_list' %}">课程机构</li>
+                                <li data-value="org">课程机构</li>
                                 <li data-value="teacher">授课老师</li>
                             </ul>
                         </div>

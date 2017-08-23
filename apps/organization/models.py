@@ -33,9 +33,13 @@ class CourseOrg(models.Model):
     courses_nums = models.IntegerField(default=0, verbose_name=u'课程数')
 
 
+
     class Meta:
         verbose_name = u'课程机构'
         verbose_name_plural = verbose_name
+
+    def get_teacher_nums(self):
+        return self.teacher_set.all().count()
 
     def __unicode__(self):
         return self.name
@@ -51,7 +55,11 @@ class Teacher(models.Model):
     click_nums = models.IntegerField(default=0, verbose_name=u'点击数')
     fav_nums = models.IntegerField(default=0, verbose_name=u'收藏数')
     add_time = models.DateTimeField(default=datetime.now)
+    image = models.ImageField(upload_to='org/%Y/%m', verbose_name=u'头像', default='')
 
     class Meta:
         verbose_name = u'教师'
         verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.name
