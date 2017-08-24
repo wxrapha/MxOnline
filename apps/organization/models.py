@@ -54,6 +54,7 @@ class Teacher(models.Model):
     points = models.CharField(max_length=50, verbose_name=u'教学特点')
     click_nums = models.IntegerField(default=0, verbose_name=u'点击数')
     fav_nums = models.IntegerField(default=0, verbose_name=u'收藏数')
+    teacher_age = models.IntegerField(default=18, verbose_name=u'年龄')
     add_time = models.DateTimeField(default=datetime.now)
     image = models.ImageField(upload_to='org/%Y/%m', verbose_name=u'头像', default='')
 
@@ -63,3 +64,6 @@ class Teacher(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def get_course_nums(self):
+        return self.course_set.all().count()
