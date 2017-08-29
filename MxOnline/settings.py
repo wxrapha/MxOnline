@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Mxonline',
         'USER': 'root',
-        'PASSWORD': '700507',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1'
 
     }
@@ -153,3 +153,5 @@ EMAIL_FROM = 'xhrapha@sina.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
